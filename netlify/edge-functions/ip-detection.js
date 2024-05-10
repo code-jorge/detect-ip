@@ -8,7 +8,6 @@ export default async function handler(_request, context) {
     const updatedContent = content
       .replace('<body', `<body data-nf-geo="${country}"`)
       .replace('127.0.0.0', ip);
-    console.log(updatedContent)
     return new Response(updatedContent, response);
   }
 
